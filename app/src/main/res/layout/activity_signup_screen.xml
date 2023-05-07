@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context="com.pinnacle.winwin.ui.signup.SignUpScreenActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSignup">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/extra_large_margin"
+            android:paddingBottom="@dimen/extra_large_margin">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="text"
+                android:hint="@string/hint_first_name"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="text"
+                android:hint="@string/hint_last_name"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/editTextFirstName"/>
+
+            <LinearLayout
+                android:id="@id/mobileNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastName">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/editTextCountryCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    tools:text="+ 91"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:background="@drawable/border_gold"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/editTextMobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:hint="@string/hint_mobile_number"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:background="@drawable/border_gold"
+                    app:layout_constraintTop_toBottomOf="@id/editTextLastName"/>
+
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="textEmailAddress"
+                android:hint="@string/hint_email"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:visibility="gone"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/mobileNumberLayout"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:hint="@string/hint_dob"
+                android:clickable="true"
+                android:focusable="false"
+                android:visibility="gone"
+                android:focusableInTouchMode="false"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmailId"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/editTextDob" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewPasswordHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:padding="8dp"
+                android:text="@string/password_hint"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/editTextPassword"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                android:hint="@string/hint_confirm_password"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/textViewPasswordHint" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="@dimen/extra_medium_margin"
+        android:text="@string/btn_signup"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_gold_gradient"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

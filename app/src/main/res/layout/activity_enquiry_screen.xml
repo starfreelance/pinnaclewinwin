@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_black_gradient"
+    tools:context="com.pinnacle.winwin.ui.enquiry.EnquiryScreenActivity">
+
+    <include
+        android:id="@id/layoutToolbar"
+        layout="@layout/toolbar_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@id/progressBarHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:paddingTop="@dimen/medium_margin"
+        android:paddingBottom="@dimen/medium_margin"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerViewEnquires"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="@dimen/medium_margin"
+        tools:listitem="@layout/cell_enquiry_me"
+        app:layout_constraintTop_toBottomOf="@id/progressBarHeader"
+        app:layout_constraintBottom_toTopOf="@id/layoutEnquiry"/>
+
+    <RelativeLayout
+        android:id="@id/layoutEnquiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@id/editTextEnquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:hint="@string/hint_enquiry"
+            android:inputType="textCapSentences|textMultiLine"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:minLines="1"
+            android:lines="6"
+            android:maxLines="10"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border_gold"
+            android:layout_toStartOf="@id/btnSend"/>
+
+        <Button
+            android:id="@id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:enabled="false"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

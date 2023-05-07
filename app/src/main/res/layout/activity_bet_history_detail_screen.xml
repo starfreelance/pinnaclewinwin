@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_landing"
+    tools:context="com.pinnacle.winwin.ui.bethistorydetails.BetHistoryDetailScreenActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableLeft="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawableRight="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/title_games"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/extra_medium_margin"
+        app:layout_constraintBottom_toTopOf="@id/layoutClaim"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/cell_height"
+            android:paddingTop="@dimen/extra_medium_margin"
+            android:paddingRight="@dimen/cell_height"
+            android:paddingBottom="@dimen/extra_medium_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bet Id : 1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBaazaarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Baazar Name : Kalyan Open"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetId" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBaazaarResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Baazar Result: 456"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBaazaarName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Game Name : Single"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBaazaarResult" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Date : 15-06-2019"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewGameName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetTiming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Time : 12:30 PM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetDate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Bet No : 123"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetTiming" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewPointsPerPaana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Points/Paana : 50"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetNo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewTotalPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Total Points : 50"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPointsPerPaana" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewPaanaType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Paana Type : SP"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTotalPoints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/layoutClaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/cell_height"
+        android:layout_marginBottom="@dimen/extra_medium_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/cell_height">
+
+        <Button
+            android:id="@id/btnClaim"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/border_gold"
+            android:text="Claim"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewWinningAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_medium_margin"
+            android:visibility="gone"
+            android:text="You Won: 456"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

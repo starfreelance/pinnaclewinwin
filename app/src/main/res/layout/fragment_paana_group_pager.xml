@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewPaanaNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_paana_number"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewPaanaType"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerViewPaanaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--<RelativeLayout
+        android:id="@id/layoutCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@id/layoutInternalCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@id/checkboxSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/extra_medium_margin"
+                android:button="@drawable/custom_checkbox"
+                android:text="SP"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@id/checkboxDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/extra_medium_margin"
+                android:layout_toEndOf="@id/checkboxSP"
+                android:layout_toRightOf="@id/checkboxSP"
+                android:button="@drawable/custom_checkbox"
+                android:text="DP"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewMotorPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutInternalCheckBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/lbl_selected_points"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_home"
+    android:padding="@dimen/extra_medium_margin">
+
+    <!--<android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/large_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/title_download_app_update"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"/>
+
+        <ProgressBar
+            android:id="@id/progressBarDownload"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:indeterminate="false"
+            android:minHeight="@dimen/small_margin"
+            android:progressDrawable="@drawable/custom_progressbar_download"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBarDownload" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewTotalPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBarDownload" />
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

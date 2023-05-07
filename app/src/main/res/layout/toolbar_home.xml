@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@drawable/bg_black_gradient"
+    android:elevation="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+    <ImageView
+        android:id="@id/imgViewLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_menu" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:text="HOME"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUserPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/large_margin"
+        android:layout_gravity="end"
+        android:text="Points"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size" />
+
+
+    <ImageView
+        android:id="@id/imgViewRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:src="@android:drawable/ic_menu_info_details" />
+
+
+</androidx.appcompat.widget.Toolbar>

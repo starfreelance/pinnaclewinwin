@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderDescription"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/lbl_column_description"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderWithdraw"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/lbl_column_withdraw"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderDescription"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderDeposit"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/lbl_column_deposit"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderWithdraw"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderBalance"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/lbl_column_balance"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderDeposit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pinnacle.winwin.ui.singlegame.SingleGameScreenActivity">
+
+    <!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Points"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/menu_title_text_size"
+            android:gravity="center"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@android:drawable/ic_menu_info_details" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <include layout="@layout/layout_game_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timer"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/menu_title_text_size"
+            android:gravity="center"
+            android:drawableLeft="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="8dp"/>
+
+    </RelativeLayout>-->
+
+    <!--Almost Done-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.4"-->
+    <!--android:gravity="center">-->
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:text="Points"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"-->
+    <!--android:gravity="center"-->
+    <!--android:drawableLeft="@android:drawable/ic_menu_info_details"-->
+    <!--android:drawablePadding="8dp"/>-->
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="Single"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"-->
+    <!--android:gravity="center"-->
+    <!--android:drawableLeft="@android:drawable/ic_menu_info_details"-->
+    <!--android:drawableRight="@android:drawable/ic_menu_info_details"-->
+    <!--android:drawablePadding="8dp"/>-->
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:text="Timer"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"-->
+    <!--android:gravity="center"-->
+    <!--android:drawableLeft="@android:drawable/ic_menu_info_details"-->
+    <!--android:drawablePadding="8dp"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="2.8"-->
+    <!--android:layout_marginTop="8dp">-->
+
+
+    <!--<Button-->
+    <!--android:id="@id/btnWalletBalance"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/border_gold"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:text="2300"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"/>-->
+
+    <!--<include layout="@layout/layout_game_number"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:layout_toRightOf="@id/btnWalletBalance"-->
+    <!--android:layout_toLeftOf="@id/btnTimer"/>-->
+
+    <!--<Button-->
+    <!--android:id="@id/btnTimer"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/border_gold"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:text="2300"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="16dp"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_above="@id/btnWalletBalance"-->
+    <!--android:text="Timer"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"-->
+    <!--android:gravity="center"-->
+
+    <!--android:drawableLeft="@android:drawable/ic_menu_info_details"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@id/btnWalletBalance"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@drawable/border_gold"-->
+    <!--android:text="2300"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"/>-->
+
+    <!--<include-->
+    <!--android:id="@id/pointsLayout"-->
+    <!--layout="@layout/layout_points"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@id/btnWalletBalance"-->
+    <!--android:layout_toStartOf="@id/btnBetOk"-->
+    <!--android:layout_toLeftOf="@id/btnBetOk"-->
+    <!--android:layout_toEndOf="@id/btnWalletBalance"-->
+    <!--android:layout_toRightOf="@id/btnWalletBalance" />-->
+
+    <!--<Button-->
+    <!--android:id="@id/btnBetOk"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@drawable/border_gold"-->
+    <!--android:text="BET OK"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/menu_title_text_size"-->
+    <!--/>-->
+
+
+    <!--</RelativeLayout>-->
+    <!--Almost Done-->
+
+    <!--New Trial-->
+
+    <include
+        layout="@layout/layout_generic_game"/>
+
+    <!--New Trial-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

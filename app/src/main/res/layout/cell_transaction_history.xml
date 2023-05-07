@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/extra_medium_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gold"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="@dimen/large_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingRight="@dimen/large_margin"
+        android:paddingBottom="@dimen/large_margin"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTransactionInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/layoutGameInfo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewTransactionId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                android:textIsSelectable="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Transaction Id : xyz1234" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewTransactionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTransactionId"
+                tools:text="Date &amp; Time : 15-06-2019" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutGameInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/layoutTransactionInfo"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewPoints"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Points : 50" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewTransactionStatus"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPoints"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Status : Success" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrierTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="layoutTransactionInfo, layoutGameInfo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:paddingEnd="@dimen/medium_margin"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierTransaction"
+            tools:text="Message : " />
+
+        <Button
+            android:id="@id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@drawable/border_gold"
+            android:text="@string/btn_cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/layoutGameInfo"
+            app:layout_constraintTop_toBottomOf="@id/textViewMessage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

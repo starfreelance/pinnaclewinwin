@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_black_gradient"
+    android:padding="@dimen/medium_margin">
+
+
+    <include
+        android:id="@id/layoutBulbLeft"
+        layout="@layout/layout_bulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@id/layoutBulbRight"
+        layout="@layout/layout_bulb_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicator="@android:color/transparent"
+        app:tabBackground="@drawable/tab_indicator_selector"
+        app:tabTextColor="@android:color/white"
+        app:tabSelectedTextColor="@color/colorEndGold"
+        android:layout_toStartOf="@id/layoutBulbRight"
+        android:layout_toEndOf="@id/layoutBulbLeft"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/numberViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/layoutBulbRight"
+        android:layout_toEndOf="@id/layoutBulbLeft"
+        android:layout_below="@id/tabLayout"/>
+
+    <!--<RelativeLayout
+        android:id="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/medium_margin"
+        android:paddingRight="@dimen/medium_margin"
+        android:layout_toRightOf="@id/layoutBulbLeft"
+        android:layout_toStartOf="@id/layoutBulbRight"
+        android:layout_toLeftOf="@id/layoutBulbRight"
+        android:layout_toEndOf="@id/layoutBulbLeft">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recyclerViewTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@id/numberViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@id/layoutOTCCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@id/checkboxOTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/custom_checkbox"
+            android:text="OTC"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/medium_margin"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/layoutBracket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_toStartOf="@id/layoutDownRight"
+        android:layout_toLeftOf="@id/layoutDownRight"
+        android:layout_toEndOf="@id/layoutDownLeft"
+        android:layout_toRightOf="@id/layoutDownLeft">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewJodi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/lbl_jodi"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewSelectedPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/lbl_selected_points"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/layoutCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@id/layoutInternalCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@id/checkboxSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/extra_medium_margin"
+                android:button="@drawable/custom_checkbox"
+                android:text="SP"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@id/checkboxDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/extra_medium_margin"
+                android:layout_toEndOf="@id/checkboxSP"
+                android:layout_toRightOf="@id/checkboxSP"
+                android:button="@drawable/custom_checkbox"
+                android:text="DP"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@id/checkboxTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/checkboxDP"
+                android:layout_toRightOf="@id/checkboxDP"
+                android:button="@drawable/custom_checkbox"
+                android:text="TP"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewMotorPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutInternalCheckBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/lbl_selected_points"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewSelectPaana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/select_paana_msg"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/points_text_size"
+        android:visibility="gone" />
+
+    <include
+        android:id="@id/layoutDownLeft"
+        layout="@layout/layout_bulb_down_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <include
+        android:id="@id/layoutDownRight"
+        layout="@layout/layout_bulb_down_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

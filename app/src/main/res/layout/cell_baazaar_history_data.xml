@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderKOKC"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Kalyan Open"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<android.support.v7.widget.AppCompatTextView
+        android:id="@id/textViewHeaderKC"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Kalyan Close"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderKO"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderMOMC"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Main Open"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderKOKC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderTOTC"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Time Open"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderMOMC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderMDOMDC"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Milan Day Open"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderTOTC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderMNOMNC"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Milan Night Open"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderMDOMDC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<android.support.v7.widget.AppCompatTextView
+        android:id="@id/textViewHeaderMC"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="Main Close"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toRightOf="@id/textViewHeaderMO"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

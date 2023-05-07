@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_landing">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/title_country_list"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extra_medium_margin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/textViewTitle"
+        android:layout_alignBottom="@id/textViewTitle"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/barrierTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewTitle,imgViewBack"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="@dimen/extra_medium_margin"
+        android:inputType="text"
+        android:hint="@string/hint_search_countries"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:background="@drawable/border_gold"
+        app:layout_constraintTop_toBottomOf="@id/barrierTitle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerViewCountryCode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/cell_country_code"
+        android:clipToPadding="true"
+        android:padding="@dimen/extra_medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearch"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    android:padding="16dp"
+    tools:context="com.pinnacle.winwin.ui.singlegame.SingleGameScreenActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/lblPoints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_wallet"
+        android:drawableLeft="@drawable/ic_wallet"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="@string/lbl_points"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@id/btnWalletBalance"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:background="@drawable/border_gold"
+        android:text="2300"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/lblPoints"
+        app:layout_constraintRight_toRightOf="@id/lblPoints"
+        app:layout_constraintTop_toBottomOf="@id/lblPoints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/lblTimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_timer"
+        android:drawableLeft="@drawable/ic_timer"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="@string/lbl_timer"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@id/btnTimer"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:background="@drawable/border_gold"
+        android:text="00:00:00"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/lblTimer"
+        app:layout_constraintRight_toRightOf="@id/lblTimer"
+        app:layout_constraintTop_toBottomOf="@id/lblTimer" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/lblSingleGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableLeft="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawableRight="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:text="@string/title_single_game"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/lblTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="@string/lbl_total"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintBottom_toTopOf="@id/btnTotal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/lblPoints" />
+
+    <Button
+        android:id="@id/btnTotal"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@drawable/border_gold"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/lblTotal" />
+
+    <Button
+        android:id="@id/btnBetOk"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_btn_bet_ok"
+        android:foreground="?attr/selectableItemBackground"
+        android:textColor="@android:color/white"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/lblTimer"
+        app:layout_constraintRight_toRightOf="@id/lblTimer" />
+
+    <include
+        android:id="@id/gameNumberLayout"
+        layout="@layout/layout_game_number_with_tab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@id/lblTotal"
+        app:layout_constraintLeft_toRightOf="@id/btnWalletBalance"
+        app:layout_constraintRight_toLeftOf="@id/btnTimer"
+        app:layout_constraintTop_toTopOf="@id/btnWalletBalance" />
+
+    <include
+        layout="@layout/layout_points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnTotal"
+        app:layout_constraintRight_toLeftOf="@id/btnBetOk" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnTotal"
+        app:layout_constraintLeft_toLeftOf="@id/lblPoints"
+        app:layout_constraintRight_toLeftOf="@id/gameNumberLayout"
+        app:layout_constraintTop_toTopOf="@id/lblPoints">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/lblClearAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_clear_all"
+            android:gravity="center"
+            android:text="@string/lbl_clear_all"
+            android:textColor="@android:color/white"
+            android:theme="@style/AppTheme.GreyRipple"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewFinal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="123"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textColor="@android:color/white"
+            android:theme="@style/AppTheme.GreyRipple"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblClearAll" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/lblFinalNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_final"
+            android:textColor="@android:color/white"
+            android:theme="@style/AppTheme.GreyRipple"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewFinal" />
+
+        <!--<android.support.v7.widget.AppCompatTextView
+            android:id="@id/lblClearAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:drawableTop="@drawable/ic_clear_all"
+            android:text="@string/lbl_clear_all"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/lblPoints"
+            app:layout_constraintRight_toLeftOf="@id/gameNumberLayout"
+            app:layout_constraintBottom_toBottomOf="@id/btnTotal"
+            app:layout_constraintTop_toTopOf="@id/lblPoints"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/AppTheme.GreyRipple"
+            android:background="?attr/selectableItemBackground"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/lblFinalNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/lbl_final"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/lblPoints"
+            app:layout_constraintRight_toLeftOf="@id/gameNumberLayout"
+            app:layout_constraintTop_toBottomOf="@id/textViewFinal"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/AppTheme.GreyRipple"
+            android:background="?attr/selectableItemBackground"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewFinal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="123"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/lblPoints"
+            app:layout_constraintRight_toLeftOf="@id/gameNumberLayout"
+            app:layout_constraintTop_toBottomOf="@id/lblClearAll"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/AppTheme.GreyRipple"
+            android:background="?attr/selectableItemBackground"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnBetOk"
+        app:layout_constraintLeft_toRightOf="@id/gameNumberLayout"
+        app:layout_constraintRight_toRightOf="@id/lblTimer"
+        app:layout_constraintTop_toTopOf="@id/lblTimer">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/lblHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_history"
+            android:gravity="center"
+            android:text="@string/lbl_history"
+            android:textColor="@android:color/white"
+            android:theme="@style/AppTheme.GreyRipple"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/lblBaazaarHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@drawable/ic_history"
+            android:gravity="center"
+            android:text="@string/lbl_baazaar_history"
+            android:textColor="@android:color/white"
+            android:theme="@style/AppTheme.GreyRipple"
+            app:layout_constraintTop_toBottomOf="@id/lblHistory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

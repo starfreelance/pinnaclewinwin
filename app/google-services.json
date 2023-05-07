@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24766198538",
+    "project_id": "pinnaclematka",
+    "storage_bucket": "pinnaclematka.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24766198538:android:1f16ff0ea603f8606640f3",
+        "android_client_info": {
+          "package_name": "com.pinnacle.winwin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24766198538-4mqanoiab2lv7rhpo503iaadq3b1uii0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-mo2K-sah7FuDe3u7M2-_Gy6AWL5SDGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24766198538-4mqanoiab2lv7rhpo503iaadq3b1uii0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

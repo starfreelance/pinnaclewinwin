@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_landing"
+    tools:context="com.pinnacle.winwin.ui.kyc.KycScreenActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/title_kyc"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgViewEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/extra_medium_margin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/textViewTitle"
+        android:layout_alignBottom="@id/textViewTitle"
+        android:src="@drawable/ic_edit_kyc"
+        android:background="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTitle"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/extra_medium_margin"
+            android:paddingBottom="@dimen/extra_medium_margin">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextAccountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="text"
+                android:hint="@string/hint_account_holder_name"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="number"
+                android:hint="@string/hint_account_number"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/editTextAccountName"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextConfirmAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="number"
+                android:hint="@string/hint_confirm_account_number"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/editTextAccountNumber"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextIfsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:inputType="text"
+                android:maxLength="11"
+                android:hint="@string/hint_ifsc"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/extra_medium_margin"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/editTextConfirmAccountNumber"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBankInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:padding="8dp"
+                tools:text="@string/password_hint"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/editTextIfsc"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@id/editTextAccountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:hint="@string/hint_account_type"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                app:layout_goneMarginTop="@dimen/extra_medium_margin"
+                android:background="@drawable/border_gold"
+                app:layout_constraintTop_toBottomOf="@id/textViewBankInfo"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="@dimen/extra_medium_margin"
+        android:text="@string/btn_submit"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_gold_gradient"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

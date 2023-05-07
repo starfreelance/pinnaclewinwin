@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="small_margin">4dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="extra_medium_margin">16dp</dimen>
+    <dimen name="menu_title_text_size">16sp</dimen>
+    <dimen name="points_text_size">14sp</dimen>
+    <dimen name="toolbar_title_text_size">18sp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+    <dimen name="extra_large_margin">32dp</dimen>
+    <dimen name="btn_reload_width">148dp</dimen>
+
+    <dimen name="cell_height">40dp</dimen>
+    <dimen name="row_header_width">55dp</dimen>
+    <dimen name="profile_img_size">72dp</dimen>
+    <dimen name="column_header_margin">12dp</dimen>
+    <dimen name="bonus_text_size">20sp</dimen>
+    
+</resources>

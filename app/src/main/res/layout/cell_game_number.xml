@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/medium_margin"
+    android:layout_marginRight="@dimen/medium_margin"
+    android:layout_marginTop="12dp">
+
+    <RelativeLayout
+        android:id="@id/layoutNumber"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.GreyRipple"
+        android:background="@drawable/border_gold">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="123"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_title_text_size" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutNumber"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

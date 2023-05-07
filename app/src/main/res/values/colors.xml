@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorStartGold">#FFbe965d</color>
+    <color name="colorEndGold">#FF976F40</color>
+    <color name="colorDarkBlue">#191a20</color>
+    <color name="transparentBlack">#7f000000</color>
+    <color name="colorHtGold">#f2d660</color>
+    <color name="colorHTTitle">#fff600</color>
+    <color name="colorInProgress">#FFA500</color>
+    <color name="colorSuccess">#00FF00</color>
+    <color name="colorFailed">#FF0000</color>
+    <color name="colorDarkGray">#a9a9a9</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="success_color">#4BB543</color>
+    <color name="failure_color">#FF0000</color>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/medium_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@id/checkboxPaana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:button="@drawable/paana_group_checkbox"
+        tools:text="SP"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        app:layout_constraintStart_toStartOf="@id/checkboxPaana"
+        app:layout_constraintEnd_toEndOf="@id/checkboxPaana"
+        app:layout_constraintTop_toBottomOf="@id/checkboxPaana"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

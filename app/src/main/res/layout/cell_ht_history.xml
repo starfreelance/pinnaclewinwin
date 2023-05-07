@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/extra_medium_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gold"
+        android:paddingLeft="@dimen/large_margin"
+        android:paddingRight="@dimen/large_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/medium_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/layoutBetInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/layoutGameInfo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Bet Id : 10"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                tools:text="Points : 50"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetId"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                tools:text="Date : 15-06-2019"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetPoints"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/layoutGameInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/layoutBetInfo"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Bet : T"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                tools:text="Result : H"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/textViewBet"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBet"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewWinningAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/medium_margin"
+                tools:text="You Won : 456"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/textViewBetResult"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetResult"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetTiming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Bet Timing : 12:30 PM"
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/textViewWinningAmount"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

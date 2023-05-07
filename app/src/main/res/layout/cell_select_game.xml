@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/extra_medium_margin"
+    android:layout_marginRight="@dimen/extra_medium_margin"
+    android:layout_marginTop="@dimen/medium_margin"
+    android:layout_marginBottom="@dimen/extra_medium_margin">
+
+    <RelativeLayout
+        android:id="@id/containerLayout"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:padding="16dp"
+        android:background="@drawable/border_gold"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.GreyRipple">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@id/imageViewGame"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_spade"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SINGLE"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/imageViewGame"
+            />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--<Button
+        android:id="@id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_btn_play"
+        android:textColor="@android:color/white"/>-->
+
+</LinearLayout>

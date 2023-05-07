@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@id/containerLayout"
+        android:layout_width="224dp"
+        android:layout_height="156dp"
+        android:background="@drawable/border_gold"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/extra_medium_margin"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--New-->
+
+        <ImageView
+            android:id="@id/imgViewBaazaar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_dice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/textViewBaazaarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_kalyan_open"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/menu_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="64dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@drawable/bg_gold_gradient"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBaazaarName" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/lblTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lbl_baazaar_time"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textViewPastResult" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="12:30 pm"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintTop_toBottomOf="@id/lblTime"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textViewPastResult" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/lblPastResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lbl_baazaar_last_result"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/textViewTime"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewPastResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="451-0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintTop_toBottomOf="@id/lblPastResult"
+                app:layout_constraintLeft_toRightOf="@id/textViewTime"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!--New-->
+
+        <!--<android.support.constraint.ConstraintLayout
+            android:id="@id/containerLayout"
+            android:layout_width="240dp"
+            android:layout_height="132dp"
+            android:padding="@dimen/medium_margin"
+            android:background="@drawable/border_gold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_kalyan_open"
+                android:textColor="@android:color/white"
+                android:drawableTop="@drawable/ic_dice"
+                app:layout_constraintTop_toTopOf="@id/containerLayout"
+                app:layout_constraintBottom_toBottomOf="@id/containerLayout"
+                app:layout_constraintRight_toRightOf="@id/containerLayout"
+                app:layout_constraintLeft_toLeftOf="@id/containerLayout"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@id/textViewTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="containerLayout"
+                app:layout_constraintBottom_toBottomOf="@id/containerLayout"
+                app:layout_constraintLeft_toLeftOf="@id/containerLayout"
+                app:layout_goneMarginRight="@dimen/medium_margin"
+                android:layout_marginRight="@dimen/extra_medium_margin"
+                android:text="Time : 12:30 pm"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@id/textViewPastResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/textViewTime"
+                app:layout_constraintTop_toTopOf="@id/textViewTime"
+                android:text="Past Result : 451"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_text_size"/>
+
+        </android.support.constraint.ConstraintLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@id/btnPlay"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_btn_play"
+        android:foreground="?attr/selectableItemBackground"
+        android:textColor="@android:color/white"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintLeft_toLeftOf="@id/containerLayout"
+        app:layout_constraintRight_toRightOf="@id/containerLayout"
+        app:layout_constraintTop_toBottomOf="@id/containerLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewBaazaarClosed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Baazaar is closed\nfor today"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/menu_title_text_size"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/containerLayout"
+        app:layout_constraintRight_toRightOf="@id/containerLayout"
+        app:layout_constraintTop_toBottomOf="@id/containerLayout"/>
+
+    <RelativeLayout
+        android:id="@id/layoutBaazaarClosed"
+        android:layout_width="0dp"
+        android:layout_height="156dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparentBlack"
+        android:visibility="gone">
+
+        <!--<android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Baazaar is closed today"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>-->
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_landing">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableLeft="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawableRight="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/title_personal_info"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/extra_medium_margin">
+
+            <!--<ImageView
+                android:id="@+id/imgViewProfile"
+                android:layout_width="@dimen/profile_img_size"
+                android:layout_height="@dimen/profile_img_size"
+                android:background="@drawable/bg_circle_profile"
+                android:src="@drawable/placeholder_profile"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <com.pinnacle.winwin.custom.CustomCircleImageView
+                android:id="@+id/imgViewProfile"
+                android:layout_width="@dimen/profile_img_size"
+                android:layout_height="@dimen/profile_img_size"
+                android:src="@drawable/placeholder_profile"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorEndGold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewMobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:text="Mobile Number : 9967456776"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/barrierProfile"
+                app:layout_constraintLeft_toRightOf="@id/imgViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPoints"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="My Points : 2300"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/barrierProfile"
+                app:layout_constraintLeft_toRightOf="@id/textViewMobileNo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@id/barrierProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="imgViewProfile,textViewMobileNo,textViewPoints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin"
+                app:layout_constraintTop_toBottomOf="@id/barrierProfile">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@id/layoutUserInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/layoutWalletInfo"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@id/layoutName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:theme="@style/AppTheme.GreyRipple"
+                        app:layout_constraintEnd_toStartOf="@id/layoutProfilePhoto"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/lblName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_your_name"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/textViewName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:drawableRight="@drawable/ic_edit"
+                                android:drawablePadding="@dimen/small_margin"
+                                android:gravity="center"
+                                tools:text="Sam Joe"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/lblName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@id/layoutProfilePhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:theme="@style/AppTheme.GreyRipple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@id/layoutName"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/lblProfilePhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_profile_photo"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/textViewChangePhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:drawableRight="@drawable/ic_download"
+                                android:drawablePadding="@dimen/small_margin"
+                                android:text="@string/lbl_change"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/lblProfilePhoto" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@id/layoutWalletInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/extra_medium_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutUserInfo">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@id/layoutPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:theme="@style/AppTheme.GreyRipple"
+                        app:layout_constraintEnd_toStartOf="@id/layoutKyc"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/lblPassword"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_password"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/textViewChangePassword"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:drawableRight="@drawable/ic_edit"
+                                android:drawablePadding="@dimen/small_margin"
+                                android:text="@string/lbl_change"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/lblPassword" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@id/layoutKyc"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:theme="@style/AppTheme.GreyRipple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@id/layoutPassword"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/lblKyc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_kyc"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@id/textViewChangeKyc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:drawableRight="@drawable/ic_edit"
+                                android:drawablePadding="@dimen/small_margin"
+                                android:text="@string/lbl_change"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/toolbar_title_text_size"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/lblKyc" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_black_gradient"
+    tools:context="com.pinnacle.winwin.ui.baazaarhistory.BaazaarHistoryScreenActivity">
+
+    <!--<com.evrencoskun.tableview.TableView
+        android:id="@id/tableViewBaazaarHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulb"
+        android:drawableLeft="@drawable/ic_bulb"
+        android:drawableEnd="@drawable/ic_bulb"
+        android:drawableRight="@drawable/ic_bulb"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/title_games"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_title_text_size"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewHeaderDate"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gold_table"
+        android:gravity="center"
+        android:padding="@dimen/extra_medium_margin"
+        android:text="@string/lbl_column_date"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/textViewTitle"/>
+
+    <com.pinnacle.winwin.custom.SyncHorizontalScrollView
+        android:id="@id/syncHorizontalHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_below="@id/textViewTitle"
+        android:layout_toRightOf="@id/textViewHeaderDate"
+        android:layout_toEndOf="@id/textViewHeaderDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewHeaderKOKC"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_ko_kc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--<android.support.v7.widget.AppCompatTextView
+                android:id="@id/textViewHeaderKC"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_kalyan_close"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderKO"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewHeaderMOMC"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_mo_mc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderKC"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewHeaderTOTC"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_to_tc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderKC"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewHeaderMDOMDC"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_mdo_mdc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderKC"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewHeaderMNOMNC"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_mno_mnc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderKC"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--<android.support.v7.widget.AppCompatTextView
+                android:id="@id/textViewHeaderMC"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gold_table"
+                android:gravity="center"
+                android:padding="@dimen/extra_medium_margin"
+                android:text="@string/lbl_column_main_close"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@id/textViewHeaderMO"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+        </LinearLayout>
+
+    </com.pinnacle.winwin.custom.SyncHorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerViewDates"
+        android:layout_width="136dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/textViewHeaderDate"/>
+
+    <com.pinnacle.winwin.custom.SyncHorizontalScrollView
+        android:id="@id/syncHorizontalDataView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/syncHorizontalHeaderView"
+        android:layout_toRightOf="@id/recyclerViewDates"
+        android:layout_toEndOf="@id/recyclerViewDates">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recyclerViewBaazaarData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+    </com.pinnacle.winwin.custom.SyncHorizontalScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pinnacle.winwin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.pinnacle.winwin.app.ASOnlineApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_latest"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_latest_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.pinnacle.winwin"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name="com.pinnacle.winwin.MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pinnacle.winwin.ui.LoginScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.forgotpassword.ForgotPasswordScreenActiviy"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.home.HomeScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.baazaar.BaazaarGridScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.baazaar.BaazaarListScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.singlegame.SingleGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.cpgame.CPGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.motorgame.MotorGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.paanagame.PaanaGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.gamehistory.GameHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.paanagame.PaanaNumberScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.personalinfo.PersonalInfoScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.walletinfo.WalletInfoScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.baazaarhistory.BaazaarHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.bracketgame.BracketGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.baazaarhistory.DemoHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.wallettransactionhistory.WalletTransactionHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.bethistorydetails.BetHistoryDetailScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.changepassword.ChangePasswordScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.paanagame.PaanaOTCGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.chartgame.ChartGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.baazaar.BaazaarNewListScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.commongame.CommonGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.headtailgame.HeadTailGameScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.paanagame.PaanaNumberSwipeableScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.headtailhistory.HeadTailHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.signup.SignUpScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.otp.VerifyOtpScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.enquiry.EnquiryScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.recharge.RechargeScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.recharge.RazorPayWebViewScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.rechargehistory.RechargeHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.withdrawalhistory.WithdrawalHistoryScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.kyc.KycScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.pinnacle.winwin.ui.withdrawal.WithdrawalScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.pinnacle.winwin.ui.recharge.PayWithUPIActivity"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

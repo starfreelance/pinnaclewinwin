@@ -1,0 +1,416 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "283dce5a89b1cb6eef7dbe574fa6e4af",
+    "entities": [
+      {
+        "tableName": "baazaar_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`bazaar_id` INTEGER NOT NULL, `bazaar_name` TEXT, `bazaar_timing` TEXT, `remaining_timing` TEXT, `booking_date` TEXT, `final` TEXT, `is_open_for_booking` INTEGER NOT NULL, `status` INTEGER NOT NULL, `close_before` INTEGER NOT NULL, `last_result` TEXT, `game_map` TEXT, `imgResource` INTEGER NOT NULL, PRIMARY KEY(`bazaar_id`))",
+        "fields": [
+          {
+            "fieldPath": "bazaarId",
+            "columnName": "bazaar_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bazaarName",
+            "columnName": "bazaar_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bazaarTiming",
+            "columnName": "bazaar_timing",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remainingTiming",
+            "columnName": "remaining_timing",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bookingDate",
+            "columnName": "booking_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "finalNumber",
+            "columnName": "final",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isOpenForBooking",
+            "columnName": "is_open_for_booking",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "closeBefore",
+            "columnName": "close_before",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastResult",
+            "columnName": "last_result",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gameMap",
+            "columnName": "game_map",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgResource",
+            "columnName": "imgResource",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "bazaar_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "game_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER NOT NULL, `game_name` TEXT, `status` INTEGER NOT NULL, `imgResource` INTEGER NOT NULL, `imageResourceName` TEXT, PRIMARY KEY(`game_id`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "game_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gameName",
+            "columnName": "game_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgResource",
+            "columnName": "imgResource",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageResourceName",
+            "columnName": "imageResourceName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "game_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "amount_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `game_id` INTEGER NOT NULL, `amount_id` INTEGER NOT NULL, `amount_value` INTEGER NOT NULL, `amount_display` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gameId",
+            "columnName": "game_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountId",
+            "columnName": "amount_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountValue",
+            "columnName": "amount_value",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountDisplay",
+            "columnName": "amount_display",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "paana_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`paana_id` INTEGER NOT NULL, `single_value` INTEGER NOT NULL, `paana_no` TEXT, `paana_type` TEXT, PRIMARY KEY(`paana_id`))",
+        "fields": [
+          {
+            "fieldPath": "paanaId",
+            "columnName": "paana_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "singleValue",
+            "columnName": "single_value",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paanaNo",
+            "columnName": "paana_no",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "paanaType",
+            "columnName": "paana_type",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "paana_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "cp_paana_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cp_paana_id` INTEGER NOT NULL, `cp_paana_no` TEXT, PRIMARY KEY(`cp_paana_id`))",
+        "fields": [
+          {
+            "fieldPath": "paanaId",
+            "columnName": "cp_paana_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paanaNo",
+            "columnName": "cp_paana_no",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "cp_paana_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "motor_comb_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`motor_comb_id` INTEGER NOT NULL, `paanaCount` INTEGER NOT NULL, `sp_comb` INTEGER NOT NULL, `dp_comb` INTEGER NOT NULL, `tp_comb` INTEGER NOT NULL, PRIMARY KEY(`motor_comb_id`))",
+        "fields": [
+          {
+            "fieldPath": "motorCombId",
+            "columnName": "motor_comb_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paanaCount",
+            "columnName": "paanaCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spComb",
+            "columnName": "sp_comb",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dpComb",
+            "columnName": "dp_comb",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tpComb",
+            "columnName": "tp_comb",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "motor_comb_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "chart_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`chart_id` INTEGER NOT NULL, `game_no` TEXT, `single_value` TEXT, `chart_name` TEXT, `paana_no` TEXT, PRIMARY KEY(`chart_id`))",
+        "fields": [
+          {
+            "fieldPath": "chartId",
+            "columnName": "chart_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gameNo",
+            "columnName": "game_no",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "singleValue",
+            "columnName": "single_value",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "chartName",
+            "columnName": "chart_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "paanaNo",
+            "columnName": "paana_no",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "chart_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "custom_games",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER NOT NULL, `game_name` TEXT, `status` INTEGER NOT NULL, `imgResource` INTEGER NOT NULL, PRIMARY KEY(`game_id`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "game_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gameName",
+            "columnName": "game_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgResource",
+            "columnName": "imgResource",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "game_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "custom_game_amount_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER NOT NULL, `amount_id` INTEGER NOT NULL, `amount_value` INTEGER NOT NULL, `amount_display` TEXT, PRIMARY KEY(`amount_id`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "game_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountId",
+            "columnName": "amount_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountValue",
+            "columnName": "amount_value",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountDisplay",
+            "columnName": "amount_display",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "amount_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '283dce5a89b1cb6eef7dbe574fa6e4af')"
+    ]
+  }
+}

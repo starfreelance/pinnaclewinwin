@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    android:padding="@dimen/extra_medium_margin">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_aap_update"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/textViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_update_message"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toolbar_title_text_size"
+        android:layout_marginTop="@dimen/extra_medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"/>
+
+    <Button
+        android:id="@id/btnOkay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/border_gold"
+        android:text="@string/btn_okay"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:theme="@style/AppTheme.GreyRipple"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

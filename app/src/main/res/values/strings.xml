@@ -1,0 +1,486 @@
+<resources>
+<!--    <string name="app_name">PinnacleMatka</string>-->
+    <string name="app_name">WinWin</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Strings for LoginScreenActivity-->
+    <string name="hint_username">USERNAME</string>
+    <string name="hint_password">PASSWORD</string>
+    <string name="btn_login">Login</string>
+    <string name="text_forgot_password">Forgot Password ?</string>
+    <string name="enter_username_error">Please enter your username</string>
+    <string name="enter_password_error">Please enter your password</string>
+    <string name="invalid_username_password_error">Invalid username or password</string>
+    <string name="internet_unavailable_error">Please check your Internet connection</string>
+    <string name="btn_okay">OKAY</string>
+    <string name="text_sign_up">Don\'t have an account? Sign up</string>
+
+    <!--Strings for-->
+    <string name="hint_enter_number">ENTER YOUR NUMBER</string>
+    <string name="btn_send_otp">SEND OTP</string>
+    <string name="enter_mobile_number_error">Please enter registered mobile number</string>
+    <string name="enter_otp_error">Please enter otp</string>
+    <string name="invalid_otp_error">Invalid OTP</string>
+    <string name="something_went_wrong_error">Something went wrong</string>
+
+    <!--Strings for VerifyOtpFragment-->
+    <string name="hint_enter_otp">OTP</string>
+    <string name="btn_verify_otp">VERIFY OTP</string>
+    <string name="hint_enter_old_password">ENTER OLD PASSWORD</string>
+
+    <!--Strings for NewPasswordFragment-->
+    <string name="hint_enter_new_password">ENTER YOUR NEW PASSWORD</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="enter_new_password_error">Please enter your new password</string>
+    <string name="invalid_password_error">Please enter a valid password</string>
+    <string name="text_resend_otp">Resend Otp</string>
+
+
+    <!--Strings for BaazaarListScreenActivity-->
+    <string name="title_baazaar_list">BAAZAAR LIST</string>
+    <string name="lbl_kalyan_open">KALYAN OPEN</string>
+    <string name="baazaar_time_value">Time : %s</string>
+    <string name="baazaar_past_result_value">Past Result : %s</string>
+    <string name="baazaar_last_result_value">Last Result : %s</string>
+
+    <!--Strings for BaazaarGridScreenActivity-->
+    <string-array name="navigation_menu_group">
+        <!--<item>PERSONAL INFORMATION</item>-->
+        <item>RECHARGE</item>
+        <item>WITHDRAWAL</item>
+        <item>VIEW GAME HISTORY</item>
+        <item>BAAZAR HISTORY</item>
+        <item>WALLET BALANCE/POINTS</item>
+        <item>ENQUIRY</item>
+    </string-array>
+
+    <string-array name="child_menu_game_history">
+        <item>ALL GAMES</item>
+        <item>SINGLE GAME</item>
+        <item>PAANA GAME</item>
+        <item>CP GAME</item>
+        <item>MOTOR GAME</item>
+        <!--<item>KAATA-CHAAPA GAME</item>-->
+        <item>BRACKET GAME</item>
+    </string-array>
+
+    <string-array name="baazaar_name_array">
+        <item>KALYAN OPEN</item>
+        <item>KALYAN CLOSE</item>
+        <item>MAIN OPEN</item>
+        <item>MAIN CLOSE</item>
+        <item>KAATAA CHAAPA</item>
+    </string-array>
+
+    <string-array name="baazaar_time_array">
+        <item>12:30 pm</item>
+        <item>4:30 pm</item>
+        <item>9:30 pm</item>
+        <item>12:30 pm</item>
+        <item>24 Hrs</item>
+    </string-array>
+
+    <string-array name="baazaar_past_result_array">
+        <item>112</item>
+        <item>777</item>
+        <item>345</item>
+        <item>456</item>
+        <item>Kaata</item>
+    </string-array>
+
+    <string name="lbl_logout">Logout</string>
+    <string name="app_exit_confirmaton">Are You Sure You Want To Exit?</string>
+    <string name="app_unauthorized_msg">Unauthorized user!!</string>
+    <string name="lbl_baazaar_time">Time</string>
+    <string name="lbl_baazaar_last_result">Last Result</string>
+    <string name="log_out_confirmaton">Are You Sure You Want To Logout?</string>
+    <string name="lbl_news">News :</string>
+    <string name="app_info_msg">This game is just for fun and it doesn\'t involve money</string>
+    <string name="title_baazaar">BAAZAAR</string>
+    <string name="baazaar_closed_msg">This Baazaar is closed for today</string>
+    <string name="bonus_msg">%s Good Luck Points</string>
+    <string name="kyc_info_msg">Verify your account to be eligible to withdraw</string>
+
+    <!--Strings for HomeScreenActivity-->
+    <string name="title_home">HOME</string>
+    <string name="title_games">GAMES</string>
+    <string name="btn_play">PLAY</string>
+
+    <string-array name="game_name_array">
+        <item>SINGLE</item>
+        <item>PAANA</item>
+        <item>CP</item>
+        <item>MOTOR</item>
+    </string-array>
+
+    <!--Strings for SingleGameScreenActivity-->
+    <string name="title_single_game">SINGLE</string>
+    <string name="lbl_points">POINTS</string>
+    <string name="lbl_timer">TIMER</string>
+    <string name="lbl_total">TOTAL</string>
+    <string name="lbl_clear_all">CLEAR ALL</string>
+    <string name="lbl_final">FINAL</string>
+    <string name="lbl_history">HISTORY</string>
+    <string name="lbl_baazaar_history">BAAZAAR HISTORY</string>
+    <string name="empty_bet_error">Please select a number before placing a bet</string>
+    <string name="balance_low_error">Please recharge your wallet before placing </string>
+    <string name="bet_placed_success_msg">Your bet has been placed successfully!!</string>
+    <string name="point_error">Please select points for the selected number</string>
+    <string name="insufficient_points_error">Please update your points before placing a bet</string>
+    <string name="final_number_empty">\u2014</string>
+    <string name="bet_confirmation_msg">Are You Sure You Want To Bet?</string>
+    <string name="bet_time_expired_msg">Baazaar Timing has expired</string>
+    <string name="maximum_single_game_bet_error">You cannot place a bet of more than 50,000 points on a Single Paana</string>
+
+    <string-array name="game_number_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="game_points_array">
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>5000</item>
+    </string-array>
+
+    <!--Strings for CPGameScreenActivity-->
+    <string name="title_cp_game">CP</string>
+    <string name="maximum_cp_game_bet_error">You cannot place a bet of more than 5,000 points on one Paana</string>
+
+    <string-array name="cp_game_number_array">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>99</item>
+        <item>00</item>
+    </string-array>
+
+    <!--Strings for MotorGameScreenActivity-->
+    <string name="title_motor_game">MOTOR</string>
+    <string name="lbl_selected_points">Selected Points :</string>
+    <string name="motor_bet_error">Please select a motor number before placing a bet</string>
+    <string name="maximum_motor_game_bet_error">You cannot place a bet of more than 5,000 points on one Motor</string>
+
+    <!--Strings for GameHistoryScreenActivity-->
+    <string name="title_game_history">GAME HISTORY</string>
+    <string name="bet_history_empty_msg">Awaiting your first bet!</string>
+    <string name="lbl_baazar_name">Baazar Name :</string>
+    <string name="lbl_date">Date :</string>
+    <string name="lbl_game_name">Game :</string>
+    <string name="lbl_bet_points">Points :</string>
+    <string name="lbl_bet_timing">Bet Timing :</string>
+    <string name="lbl_booking_time">Booking Time :</string>
+    <string name="lbl_bet_no">Bet No :</string>
+    <string name="lbl_amount">Amount :</string>
+    <string name="lbl_baazar_result">Baazar Result :</string>
+    <string name="lbl_you_won">You Won :</string>
+    <string name="btn_claim">CLAIM</string>
+    <string name="title_all">ALL</string>
+
+    <!--Strings for PaanaGameScreenActivity-->
+    <string name="title_paana_game">PAANA</string>
+    <string name="select_paana_msg">Select the number to get the paana\'s</string>
+    <string name="maximum_paana_game_bet_error">You cannot place a bet of more than 5,000 points on one Paana</string>
+    <string name="paana_checkbox_select_error">Please select paana type before placing a bet</string>
+
+    <!---->
+    <string name="hint_paana_number">ENTER PAANA NUMBER</string>
+    <string name="valid_paana_number_error">Please enter a valid Paana number</string>
+
+    <!--Strings for PersonalInfoScreenActivity-->
+    <string name="title_personal_info">PERSONAL INFO</string>
+    <string name="lbl_mobile_no">Mobile No :</string>
+    <string name="lbl_my_points">My Points :</string>
+    <string name="lbl_change_photo">Change Profile Photo</string>
+    <string name="lbl_change_password">Change Password</string>
+    <string name="lbl_profile_photo">PROFILE PHOTO</string>
+    <string name="lbl_change">Change</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_added_by">Added By</string>
+    <string name="lbl_kyc">Kyc</string>
+    <string name="name_updated_successful_msg">Your name has been updated successfully!!</string>
+
+    <string-array name="select_image_title">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+
+    <!--Strings for WalletInfoScreenActivity-->
+    <string name="title_wallet_info">WALLET INFO</string>
+    <string name="lbl_your_name">YOUR NAME</string>
+    <string name="lbl_your_number">YOUR NUMBER</string>
+    <string name="lbl_wallet_balance">WALLET BALANCE</string>
+    <string name="lbl_wallet_history">WALLET HISTORY</string>
+    <string name="lbl_view">View</string>
+    <string name="btn_reload">RELOAD</string>
+    <string name="wallet_updated_msg">Wallet balance updated successfully!!</string>
+
+    <!--Strings for -->
+    <string name="title_edit_profile_name">Edit Profile Name</string>
+    <string name="hint_first_name">FIRST NAME</string>
+    <string name="hint_last_name">LAST NAME</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!--Strings for PermissionUtils-->
+    <string name="permission_storage_title">Allow PinnacleMatka to use your phone\'s storage?</string>
+    <string name="permission_storage_message">This lets PinnacleMatka access information like photos on your phone and its SD card.</string>
+
+    <string name="permission_camera_title">Allow PinnacleMatka to use your phone\'s camera?</string>
+    <string name="permission_camera_message">To capture photos allow PinnacleMatka access to your camera.</string>
+
+    <string name="permission_read_sms_title">Allow PinnacleMatka to send and view your SMS messages?</string>
+    <string name="permission_read_sms_message">This lets PinnacleMatka access to verify your mobile number.</string>
+
+    <string name="permission_read_phone_state_title">Allow PinnacleMatka to read your phone state?</string>
+    <string name="permission_read_phone_state_message">This lets PinnacleMatka access to verify your SIM card.</string>
+
+    <string name="permission_positive_btn">ALLOW</string>
+    <string name="permission_negative_btn">DENY</string>
+
+    <string name="never_ask_permission_message">This lets PinnacleMatka access information like photos on your phone and its SD card.\nTo enable this, click App Settings below and activate Storage under the Permission menu.</string>
+    <string name="never_ask_permission_camera_message">To capture photos allow PinnacleMatka access to your camera.\nTo enable this, click App Settings below and activate Camera under the Permission menu.</string>
+    <string name="never_ask_read_sms_permission_message">This lets PinnacleMatka access to verify your mobile number.\nTo enable this, click App Settings below and activate SMS under the Permission menu.</string>
+    <string name="never_ask_read_phone_state_permission_message">This lets PinnacleMatka access to verify your SIM card.\nTo enable this, click App Settings below and activate Telephone under the Permission menu.</string>
+    <string name="never_ask_positive_btn">APP SETTINGS</string>
+    <string name="never_ask_negative_btn">NOT NOW</string>
+
+    <!--Strings for BracketGameScreenActivity-->
+    <string name="title_bracket_game">BRACKET</string>
+    <string name="lbl_jodi">Jodi :</string>
+    <string name="maximum_bracket_game_bet_error">You cannot place a bet of more than 5,000 points on one Jodi</string>
+
+    <!--Strings for BaazaarHistoryScreenActivity-->
+    <string name="title_baazaar_history">BAAZAAR HISTORY</string>
+    <string name="lbl_column_kalyan_open">KALYAN OPEN</string>
+    <string name="lbl_column_ko_kc">KALYAN OPEN / CLOSE</string>
+    <string name="lbl_column_kalyan_close">KALYAN CLOSE</string>
+    <string name="lbl_column_main_open">MAIN OPEN</string>
+    <string name="lbl_column_mo_mc">MAIN OPEN / CLOSE</string>
+    <string name="lbl_column_main_close">MAIN CLOSE</string>
+    <string name="lbl_column_to_tc">TIME OPEN / CLOSE</string>
+    <string name="lbl_column_mdo_mdc">MILAN DAY OPEN / CLOSE</string>
+    <string name="lbl_column_mno_mnc">MILAN NIGHT OPEN / CLOSE</string>
+
+    <!--Strings for WalletTransactionHistoryScreenActivity-->
+    <string name="title_wallet_history">WALLET HISTORY</string>
+    <string name="lbl_column_date">DATE</string>
+    <string name="lbl_column_description">DESCRIPTION</string>
+    <string name="lbl_column_withdraw">WITHDRAW</string>
+    <string name="lbl_column_deposit">DEPOSIT</string>
+    <string name="lbl_column_balance">BALANCE</string>
+
+    <!--Strings for BetHistoryDetailScreenActivity-->
+    <string name="title_bet_details">BET DETAILS</string>
+    <string name="lbl_bet_id">Bet Id :</string>
+    <string name="lbl_bet_game_name">Game Name :</string>
+    <string name="lbl_time">Time :</string>
+    <string name="lbl_points_per_paana">Points/Paana :</string>
+    <string name="lbl_total_points">Total Points :</string>
+    <string name="lbl_paana_type">Paana Type :</string>
+
+    <!--Strings for -->
+    <string name="title_choose_option">Choose an Option</string>
+
+    <!--Strings for CustomDownloadDialogFragment-->
+    <string name="title_download_app_update">Please wait while your file is downloading!!</string>
+
+    <!--Strings for CustomAppUpdateDialogFragment-->
+    <string name="title_aap_update">Update Now</string>
+    <string name="app_update_message">To unlock amazing new features please update your app</string>
+
+    <!--Strings for ChangePasswordScreenActivity-->
+    <string name="hint_old_password">OLD PASSWORD</string>
+    <string name="hint_new_password">NEW PASSWORD</string>
+    <string name="hint_confirm_password">CONFIRM PASSWORD</string>
+    <string name="enter_old_password_error">Please enter your old password</string>
+    <string name="confirm_password_error">Please confirm your password</string>
+    <string name="password_match_error">Password doesn\'t match</string>
+    <string name="password_hint">1 Uppercase, 1 Lowercase, 1 digit and Minimum length 8</string>
+
+    <!--Strings for ChartGameScreenActivity-->
+    <string-array name="number_tab_array">
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+    </string-array>
+
+    <!--Strings for CommonGameScreenActivity-->
+    <string name="title_common_game">COMMON</string>
+
+    <!--Strings for ChartGameScreenActivity-->
+    <string name="title_chart_game">CHART</string>
+
+    <!--Strings for HeadTailGameScreenActivity-->
+    <string name="title_head_tail_game">HEAD-TAIL</string>
+    <string name="lbl_cancel_bet">CANCEL BET</string>
+    <string name="lbl_last_10_results">Last 10 Results</string>
+    <string name="ht_winner_msg">Congratulations you have won %s</string>
+    <string name="ht_lost_msg">Sorry better luck next time</string>
+    <string name="ht_bet_cancel_msg">Your points have been reverted back to your wallet</string>
+    <string name="ht_empty_bet_error">Please select Head or Tail before placing a bet</string>
+    <string name="ht_point_error">Please select points before placing a bet</string>
+    <string name="maximum_head_bet_error">You cannot place a bet of more than %s points on Head in a single game</string>
+    <string name="maximum_tail_bet_error">You cannot place a bet of more than %s points on Tail in a single game</string>
+    <!--    <string name="ht_result_msg">Result : %s</string>-->
+    <!--    <string name="ht_you_won_msg">You Won : %s</string>-->
+    <string name="ht_result_msg">Result :</string>
+    <string name="ht_you_won_msg">You Won :</string>
+
+    <!--Strings for PaanaNumberSwipeableScreenActivity-->
+    <string name="paana_group_point_error">Please select points for the selected paana type</string>
+    <string name="clear_bet_msg">Are You Sure You Want To Continue Without Placing a Bet?</string>
+    <string name="lbl_paana_number">Paana Number : %s</string>
+
+    <!--Strings for HeadTailHistoryScreenActivity-->
+    <string name="title_ht_history">HEAD-TAIL HISTORY</string>
+    <string name="lbl_bet_type">Bet :</string>
+    <string name="lbl_bet_result">Result :</string>
+
+    <!--Strings for SignupScreenActivity-->
+    <string name="btn_signup">Sign up</string>
+    <string name="hint_mobile_number">MOBILE NUMBER</string>
+    <string name="hint_email">EMAIL</string>
+    <string name="hint_dob">DATE OF BIRTH</string>
+    <string name="enter_first_name_error">Please enter your first name</string>
+    <string name="enter_last_name_error">Please enter your last name</string>
+    <string name="enter_mobile_no_error">Please enter your mobile number</string>
+    <string name="enter_valid_mobile_no_error">Please enter a valid mobile number</string>
+    <string name="enter_email_error">Please enter your email</string>
+    <string name="enter_valid_email">Please enter a valid email</string>
+    <string name="select_dob_error">Please select your Date of Birth</string>
+
+    <!--Strings for VerifyOtpScreenActivity-->
+    <string name="otp_value">Your OTP is : %s</string>
+
+    <!--Strings for -->
+    <string name="title_enquiry">ENQUIRY</string>
+    <string name="hint_enquiry">Type a message</string>
+
+    <!--Strings for RechargeScreenActivity-->
+    <string name="title_recharge">ADD POINTS</string>
+    <string name="hint_amount">AMOUNT</string>
+    <string name="enter_amount_error">Please enter recharge amount</string>
+    <string name="minimum_amount_error">Minimum recharge amount is %d</string>
+    <string name="maximum_amount_error">Maximum recharge amount is %d</string>
+    <string name="recharge_info_msg">Your recharge request has been submitted and you can check your request status by clicking on Okay button.</string>
+
+    <!--Strings for RechargeHistoryScreenActivity-->
+    <string name="title_recharge_history">RECHARGE</string>
+    <string name="lbl_bill_id">Bill Id :</string>
+    <string name="lbl_date_time">Date &amp; Time :</string>
+    <string name="lbl_status">Status :</string>
+    <string name="lbl_add_points">Add Points</string>
+    <string name="recharge_history_empty_msg">Awaiting your first recharge!</string>
+    <string name="recharge_inprogress_msg">Recharge request in progress, it will be processed in 1 working day.</string>
+    <string name="recharge_failed_msg">Recharge request failed, if any amount has been deducted from your bank account it will be refunded in 7\-14 working days.</string>
+    <string name="recharge_success_msg">Recharge request successful, points have been added to your wallet.</string>
+
+    <!--Strings for KycScreenActivity-->
+    <string name="title_kyc">KYC</string>
+    <string name="hint_account_holder_name">ACCOUNT HOLDER NAME</string>
+    <string name="hint_account_number">ACCOUNT NUMBER</string>
+    <string name="hint_confirm_account_number">CONFIRM ACCOUNT NUMBER</string>
+    <string name="hint_ifsc">IFSC</string>
+    <string name="hint_account_type">ACCOUNT TYPE</string>
+    <string name="enter_account_name_error">Please enter account holder name</string>
+    <string name="enter_account_number_error">Please enter account number</string>
+    <string name="confirm_account_number_error">Please confirm account number</string>
+    <string name="account_number_match_error">Account number doesn\'t match</string>
+    <string name="enter_ifsc_error">Please enter IFSC</string>
+    <string name="select_account_type_error">Please select account type</string>
+    <string name="invalid_ifsc_error">Please enter a valid IFSC</string>
+    <string name="kyc_updated_msg">Your Kyc details have been updated successfully</string>
+
+    <string-array name="account_type_title">
+        <item>Savings</item>
+        <item>Current</item>
+    </string-array>
+
+    <!--Strings for -->
+    <string name="title_withdrawal_history">WITHDRAWAL</string>
+    <string name="withdrawal_history_empty_msg">Awaiting your first withdrawal!</string>
+    <string name="lbl_transaction_id">Transaction Id :</string>
+    <string name="cancel_withdraw_points_success_msg">Amount has been refunded to your wallet</string>
+    <string name="withdrawal_initiated_msg">Withdraw request initiated, it will be verified in 1 working day. If you wish you can cancel it.</string>
+    <string name="withdrawal_cancelled_msg">Withdraw request cancelled, amount has been refunded to your wallet.</string>
+    <string name="withdrawal_success_msg">Withdraw request successful, amount will reflect in your bank account in 1 working day.</string>
+    <string name="lbl_message">Message :</string>
+    <string name="lbl_withdraw_points">Withdraw Points</string>
+
+    <!--Strings for-->
+    <string name="title_withdrawal">WITHDRAW POINTS</string>
+    <string name="withdraw_request_success_msg">Your withdraw request has been submitted and it will be verified and processed in 1 working day</string>
+
+    <!---->
+    <string name="title_country_list">COUNTRY LIST</string>
+    <string name="hint_search_countries">SEARCH COUNTRIES</string>
+    <string name="country_code_value">+ %s</string>
+
+</resources>

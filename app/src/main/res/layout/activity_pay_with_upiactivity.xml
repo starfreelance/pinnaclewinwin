@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_landing"
+    android:padding="16dp"
+    tools:context="com.pinnacle.winwin.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_add_points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Points"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_enter_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:maxLength="4"
+        android:hint="Enter Points"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:inputType="number"
+        android:padding="8dp"
+        android:background="@drawable/border_gold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_add_points"
+        app:layout_constraintStart_toStartOf="@+id/tv_add_points"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_points"
+        tools:ignore="Autofill" />
+
+    <RadioGroup
+        android:id="@+id/rg_payment_apps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_points">
+
+        <RadioButton
+            android:id="@+id/rb_Gpay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:text="Google Pay" />
+
+        <RadioButton
+            android:id="@+id/rb_paytm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:text="Paytm" />
+
+        <RadioButton
+            android:id="@+id/rb_phone_pe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:text="PhonePe" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_payment_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="SUCCESS"
+        android:textAlignment="center"
+        android:textColor="@color/success_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pay"
+        app:layout_constraintEnd_toEndOf="@+id/rg_payment_apps"
+        app:layout_constraintStart_toStartOf="@+id/rg_payment_apps"
+        app:layout_constraintTop_toBottomOf="@+id/rg_payment_apps"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PAY with UPI"
+        android:textColor="@android:color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/bg_gold_gradient"
+        app:backgroundTint="@null"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_payment_apps"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

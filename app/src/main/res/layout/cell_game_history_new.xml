@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/extra_medium_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_gold"
+        android:paddingLeft="@dimen/large_margin"
+        android:paddingRight="@dimen/large_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/medium_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/AppTheme.GreyRipple"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/layoutBetInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/layoutGameInfo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBaazaarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baazar Name : Kalyan Open"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Bet No : 123"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBaazaarName"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Date : 15-06-2019"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetNo"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/layoutGameInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/layoutBetInfo"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Name : Single"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetPoints"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Points : 50"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/textViewGameName"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewGameName"/>
+
+            <Button
+                android:id="@id/btnClaim"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:background="@drawable/border_gold"
+                android:text="Claim"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/textViewBetPoints"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetPoints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewWinningAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="You Won: 456"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/points_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/textViewBetPoints"
+                app:layout_constraintTop_toBottomOf="@id/textViewBetPoints"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/textViewBetTiming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bet Timing : 12:30 PM"
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/btnClaim"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewBaazaarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baazar Name : Kalyan Open"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewBetNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="Bet No : 123"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBaazaarName"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewBetDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="Date : 15-06-2019"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBetNo"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Name : Single"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@id/textViewBetPoints"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="Points : 50"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintLeft_toLeftOf="@id/textViewGameName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewGameName"/>
+
+        <Button
+            android:id="@id/btnClaim"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@drawable/border_gold"
+            android:text="Claim"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/points_text_size"
+            app:layout_constraintLeft_toLeftOf="@id/textViewBetPoints"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBetPoints" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="Bet Timing : 12:30 PM"
+            android:textColor="@android:color/white"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="@id/btnClaim"
+            app:layout_constraintTop_toBottomOf="@id/btnClaim"
+            app:layout_constraintRight_toRightOf="parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
